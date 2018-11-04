@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Harimayco\Menu\Models\MenuItems;
 use Harimayco\Menu\Models\Menus;
 use Illuminate\Http\Request;
+use Harimayco\Menu\Facades\Menu;
 
 class WelcomeController extends Controller
 {
@@ -28,8 +29,17 @@ class WelcomeController extends Controller
 
     public function index()
     {
-        $menus = $this->menus->all();
-        $menusItems = $this->menuItems->all();
-        return view('menu-nav', compact('menus', 'menusItems'));
+        /*
+        Parameter: Menu ID
+        Return: Array
+        */
+        //exemplo com menu separado
+        $collection = $this->menus->all();
+        foreach ($collection as $key => $collect){
+            $menuList[$collect->name] = Menu::get($collect->id);
+        }
+
+        $menuItems = Menu::get(1);
+        return view('menu-nav', compact('menuList', 'menuItems'));
     }
 }
