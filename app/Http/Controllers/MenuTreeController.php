@@ -46,7 +46,7 @@ class MenuTreeController extends MenuController
      */
     public function show($id)
     {
-        //
+        return view('show');
     }
 
     /**

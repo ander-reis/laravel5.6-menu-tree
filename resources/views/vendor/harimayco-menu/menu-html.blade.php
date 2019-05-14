@@ -14,61 +14,61 @@ $currentUrl = url()->current();
 
 						<div class="wrap">
 							
-							{{--<div class="manage-menus">--}}
-								{{--<form method="get" action="{{ $currentUrl }}">--}}
-									{{--<label for="menu" class="selected-menu">Select the menu you want to edit:</label>--}}
+							<div class="manage-menus">
+								<form method="get" action="{{ $currentUrl }}">
+									<label for="menu" class="selected-menu">Select the menu you want to edit:</label>
 
-									{{--{!! Menu::select('menu', $menulist) !!}--}}
+									{!! Menu::select('menu', $menulist) !!}
 
-									{{--<span class="submit-btn">--}}
-										{{--<input type="submit" class="button-secondary" value="Choose">--}}
-									{{--</span>--}}
-									{{--<span class="add-new-menu-action"> or <a href="{{ $currentUrl }}?action=edit&menu=0">Create new menu</a>. </span>--}}
-								{{--</form>--}}
-							{{--</div>--}}
-							{{--<div id="nav-menus-frame">--}}
+									<span class="submit-btn">
+										<input type="submit" class="button-secondary" value="Choose">
+									</span>
+									<span class="add-new-menu-action"> or <a href="{{ $currentUrl }}?action=edit&menu=0">Create new menu</a>. </span>
+								</form>
+							</div>
+							<div id="nav-menus-frame">
 
 								@if(request()->has('menu')  && !empty(request()->input("menu")))
-								{{--<div id="menu-settings-column" class="metabox-holder">--}}
+								<div id="menu-settings-column" class="metabox-holder">
 
-									{{--<div class="clear"></div>--}}
+									<div class="clear"></div>
 
-									{{--<form id="nav-menu-meta" action="" class="nav-menu-meta" method="post" enctype="multipart/form-data">--}}
-										{{--<div id="side-sortables" class="accordion-container">--}}
-											{{--<ul class="outer-border">--}}
-												{{--<li class="control-section accordion-section  open add-page" id="add-page">--}}
-													{{--<h3 class="accordion-section-title hndle" tabindex="0"> Custom Link <span class="screen-reader-text">Press return or enter to expand</span></h3>--}}
-													{{--<div class="accordion-section-content ">--}}
-														{{--<div class="inside">--}}
-															{{--<div class="customlinkdiv" id="customlinkdiv">--}}
-																{{--<p id="menu-item-url-wrap">--}}
-																	{{--<label class="howto" for="custom-menu-item-url"> <span>URL</span>&nbsp;&nbsp;&nbsp;--}}
-																		{{--<input id="custom-menu-item-url" name="url" type="text" class="code menu-item-textbox" value="http://">--}}
-																	{{--</label>--}}
-																{{--</p>--}}
+									<form id="nav-menu-meta" action="" class="nav-menu-meta" method="post" enctype="multipart/form-data">
+										<div id="side-sortables" class="accordion-container">
+											<ul class="outer-border">
+												<li class="control-section accordion-section  open add-page" id="add-page">
+													<h3 class="accordion-section-title hndle" tabindex="0"> Custom Link <span class="screen-reader-text">Press return or enter to expand</span></h3>
+													<div class="accordion-section-content ">
+														<div class="inside">
+															<div class="customlinkdiv" id="customlinkdiv">
+																<p id="menu-item-url-wrap">
+																	<label class="howto" for="custom-menu-item-url"> <span>URL</span>&nbsp;&nbsp;&nbsp;
+																		<input id="custom-menu-item-url" name="url" type="text" class="code menu-item-textbox" value="http://">
+																	</label>
+																</p>
 
-																{{--<p id="menu-item-name-wrap">--}}
-																	{{--<label class="howto" for="custom-menu-item-name"> <span>Label</span>&nbsp;--}}
-																		{{--<input id="custom-menu-item-name" name="label" type="text" class="regular-text menu-item-textbox input-with-default-title" title="Label menu">--}}
-																	{{--</label>--}}
-																{{--</p>--}}
+																<p id="menu-item-name-wrap">
+																	<label class="howto" for="custom-menu-item-name"> <span>Label</span>&nbsp;
+																		<input id="custom-menu-item-name" name="label" type="text" class="regular-text menu-item-textbox input-with-default-title" title="Label menu">
+																	</label>
+																</p>
 
-																{{--<p class="button-controls">--}}
+																<p class="button-controls">
 
-																	{{--<a  href="#" onclick="addcustommenu()"  class="button-secondary submit-add-to-menu right"  >Add menu item</a>--}}
-																	{{--<span class="spinner" id="spincustomu"></span>--}}
-																{{--</p>--}}
+																	<a  href="#" onclick="addcustommenu()"  class="button-secondary submit-add-to-menu right"  >Add menu item</a>
+																	<span class="spinner" id="spincustomu"></span>
+																</p>
 
-															{{--</div>--}}
-														{{--</div>--}}
-													{{--</div>--}}
-												{{--</li>--}}
+															</div>
+														</div>
+													</div>
+												</li>
 
-											{{--</ul>--}}
-										{{--</div>--}}
-									{{--</form>--}}
+											</ul>
+										</div>
+									</form>
 
-								{{--</div>--}}
+								</div>
 								@endif
 								<div id="menu-management-liquid">
 									<div id="menu-management">
@@ -203,7 +203,7 @@ $currentUrl = url()->current();
 										</form>
 									</div>
 								</div>
-							{{--</div> nav-menus-frame--}}
+							</div> {{--nav-menus-frame--}}
 						</div>
 
 						<div class="clear"></div>

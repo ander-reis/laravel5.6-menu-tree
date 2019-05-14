@@ -24,3 +24,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('/menu', 'MenuTreeController@index');
+Route::get('/teste', 'MenuTreeController@show');
